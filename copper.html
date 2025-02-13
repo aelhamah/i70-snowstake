@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copper Mountain Snowstake</title>
+    <script src="https://cdn.hdrelay.com/hdrelay.js"></script> <!-- Load HDRelay script -->
+    <style>
+        .snowstake-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            height: 360px;
+            margin: auto;
+        }
+        .hdrelay-player {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="snowstake-container">
+        <!-- HDRelay player element -->
+        <div class="hdrelay-player" data-id="24a95c15-ab91-4df6-bf2d-3b93a6e55c8e"></div>
+    </div>
+
+    <script>
+        // Ensure HDRelay initializes after the DOM is ready
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.HDRelay && HDRelay.create) {
+                HDRelay.create({
+                    id: "24a95c15-ab91-4df6-bf2d-3b93a6e55c8e", // Replace with the actual stream ID
+                    target: document.querySelector(".hdrelay-player")
+                });
+            }
+        });
+    </script>
+</body>
+</html>
